@@ -62,46 +62,7 @@ Central management class that coordinates the entire system.
 | **Method Overriding** | Implementation of abstract methods, Object class overrides |
 | **Method Overloading** | Multiple method signatures for different parameter types |
 
-## 🚀 Getting Started
 
-### Prerequisites
-- Java Development Kit (JDK) 8 or higher
-- Java IDE (Eclipse, IntelliJ IDEA, or similar)
-
-### Installation
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/university-management-system.git
-   ```
-2. Open the project in your preferred Java IDE
-3. Run the `UniversitySystemDemo` class to see the system in action
-
-## 📝 Usage Example
-
-```java
-// Create a university
-University myUniversity = new University("Tech University", 100, 50);
-
-// Create professors
-Professor profMath = new Professor("John Smith", 45, "P001", "Mathematics");
-Professor profCS = new Professor("Alice Johnson", 38, "P002", "Computer Science");
-
-// Add subjects to professors
-profMath.addSubject("Calculus");
-profCS.addSubject("Java Programming");
-
-// Create students
-Student student1 = new Student("Bob Wilson", 20, "S001", "Computer Science");
-Student student2 = new Student("Emma Davis", 21, "S002", "Mathematics");
-
-// Create and assign courses
-Course javaCourse = new Course("CS101", "Introduction to Java", profCS);
-javaCourse.addStudent(student1);
-student1.enrollCourse(javaCourse);
-
-// Display university information
-myUniversity.displayAllPeople();
-```
 
 ## 📊 Project Structure
 
@@ -113,8 +74,60 @@ src/
 ├── Course.java           # Course management class
 ├── University.java       # Central system management
 └── UniversitySystemDemo.java  # Demo application
+# University Management System
 
-## 🙏 Acknowledgements
+A comprehensive Java-based Object-Oriented Programming project demonstrating core OOP principles through a university management application.
 
-- Project created as an educational demonstration of Object-Oriented Programming principles
-- Inspired by real-world university management systems
+## 🎓 Project Overview
+
+The University Management System manages students, professors, courses, and administrative functions in a university environment. This project showcases fundamental OOP concepts in Java without using abstract classes/methods or ArrayList/LinkedList, as per specific requirements.
+
+## 🔑 Key Features
+
+- Base class hierarchy with polymorphic behavior using regular classes
+- Comprehensive class relationships (inheritance, composition)
+- Encapsulation through proper access modifiers
+- Static and instance members with appropriate usage
+- Method overriding and overloading demonstrations
+- Type checking and casting with `instanceof` operator
+- Dual GPA system: Student GPA (per student) and Course GPA (per course)
+
+## 📚 Class Structure
+
+### Person
+Base class for all individuals in the university system.
+- Fields: `name`, `age`, `id`
+- Methods: Getters/setters, `toString`, `equals`
+
+### Student (Extends Person)
+Represents university students with academic attributes.
+- Fields: `major`, `courses` (array), `grades` (array)
+- Methods: Enroll in courses, update grades (overloaded), calculate Student GPA
+
+### Professor (Extends Person)
+Represents faculty members with teaching responsibilities.
+- Fields: `department`, `subjects` (array)
+- Methods: Add subjects, get subject list
+
+### Course
+Manages academic course information and enrollment.
+- Fields: `courseCode`, `courseName`, `professor`, `students` (array)
+- Methods: Add students, calculate Course GPA
+
+### University
+Central management class coordinating the entire system.
+- Fields: `name`, `people` (array), `courses` (array)
+- Methods: Add people/courses, display all people, search by ID/course code
+
+## 🧩 OOP Concepts Demonstrated
+
+| Concept              | Implementation                                      |
+|----------------------|----------------------------------------------------|
+| **Classes & Objects** | Each entity as a class with clear responsibilities |
+| **Constructors**      | Multiple constructor options                      |
+| **Encapsulation**     | Private fields with public getters/setters        |
+| **Inheritance**       | `Student` and `Professor` extend `Person`         |
+| **Composition**       | `Course` contains `Professor` and `Students`      |
+| **Polymorphism**      | `Person` array holds `Student` and `Professor`    |
+| **Method Overriding** | `toString`, `equals` overridden in `Person`       |
+| **Method Overloading**| Grade updates in `Student` with different params  |
