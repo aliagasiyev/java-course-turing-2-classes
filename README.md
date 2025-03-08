@@ -113,19 +113,6 @@ src/
 ├── Course.java           # Course management class
 ├── University.java       # Central system management
 └── UniversitySystemDemo.java  # Demo application
-```
-
-## 🛠️ Future Improvements
-
-- Database integration for data persistence
-- GUI interface for user interaction
-- Additional university entities (departments, faculties, etc.)
-- Advanced reporting and analytics features
-- Grade management and academic performance tracking
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
 
